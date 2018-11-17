@@ -6,9 +6,16 @@
        <h1>My First Blog Page</h1>
        <h2>from the Django workshop</h2>
         <p>Hi there!</p>
-        <em>This is exciting!></em>
+        <em>This is exciting!</em>
         <strong> I'm surprised it works</strong>
         <a href="https://djangogirls.org">link</a>
+        <div> {% for post in posts %}
+                <div>
+                   <p>published: {{ post.published_date }}</p>
+                   <h3><a href="">{{ post.title }}</a></h3>
+                   <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}</div>
         <p>It works!</p>
     </body>
 </html>
